@@ -7,12 +7,13 @@ import net.cyclestreets.util.EditTextHistory;
 import net.cyclestreets.util.MessageBox;
 import net.cyclestreets.views.RouteType;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 
-public class RouteByNumber {
+public class RouteByNumber extends Activity {
   public static void launch(final Context context) {
     final AlertDialog.Builder builder = new AlertDialog.Builder(context);
     builder.setTitle(R.string.ic_menu_route_number);
