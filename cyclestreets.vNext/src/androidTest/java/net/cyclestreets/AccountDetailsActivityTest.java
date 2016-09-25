@@ -18,6 +18,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.matcher.ViewMatchers.isEnabled;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static net.cyclestreets.CycleStreetsPreferences.PREF_EMAIL_KEY;
@@ -88,96 +89,96 @@ public class AccountDetailsActivityTest
         }
     }
 
-//    @Test
-//    public void test1signIn()
-//    {
-//        onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
-//
-//        onView(withId(R.id.username)).perform(ViewActions.clearText());
-//        onView(withId(R.id.username)).perform(ViewActions.typeText(username));
-//        onView(withId(R.id.username)).check(ViewAssertions.matches(withText(username)));
-//
-//        onView(withId(R.id.password)).perform(ViewActions.clearText());
-//        onView(withId(R.id.password)).perform(ViewActions.typeText(password));
-//        onView(withId(R.id.password)).check(ViewAssertions.matches(withText(password)));
-//
-//        onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
-//
-//        onView(withId(R.id.signin_button)).perform((ViewActions.click()));
-//    }
-//
-//    @Test
-//    public void test2invalidSignIn()
-//    {
-//        try {
-//            onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
-//
-//
-//            onView(withId(R.id.username)).perform(ViewActions.clearText());
-//            onView(withId(R.id.username)).perform(ViewActions.typeText(invalidUsername));
-//            onView(withId(R.id.username)).check(ViewAssertions.matches(withText(invalidUsername)));
-//
-//            onView(withId(R.id.password)).perform(ViewActions.clearText());
-//            onView(withId(R.id.password)).perform(ViewActions.typeText(invalidPassword));
-//            onView(withId(R.id.password)).check(ViewAssertions.matches(withText(invalidPassword)));
-//
-//            onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
-//
-//            onView(withId(R.id.signin_button)).perform((ViewActions.click()));
-//        }
-//        catch(AssertionError e)
-//        {
-//            assert true;
-//        }
-//    }
-//    @Test
-//    public void test3invalidSignIn()
-//    {
-//        try {
-//            onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
-//
-//
-//            onView(withId(R.id.username)).perform(ViewActions.clearText());
-//            onView(withId(R.id.username)).perform(ViewActions.typeText(username));
-//            onView(withId(R.id.username)).check(ViewAssertions.matches(withText(username)));
-//
-//            onView(withId(R.id.password)).perform(ViewActions.clearText());
-//            onView(withId(R.id.password)).perform(ViewActions.typeText(invalidPassword));
-//            onView(withId(R.id.password)).check(ViewAssertions.matches(withText(invalidPassword)));
-//
-//            onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
-//
-//            onView(withId(R.id.signin_button)).perform((ViewActions.click()));
-//        }
-//        catch(AssertionError e)
-//        {
-//            assert true;
-//        }
-//    }
-//    @Test
-//    public void test4invalidSignIn()
-//    {
-//        try {
-//            onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
-//
-//
-//            onView(withId(R.id.username)).perform(ViewActions.clearText());
-//            onView(withId(R.id.username)).perform(ViewActions.typeText(invalidUsername));
-//            onView(withId(R.id.username)).check(ViewAssertions.matches(withText(invalidUsername)));
-//
-//            onView(withId(R.id.password)).perform(ViewActions.clearText());
-//            onView(withId(R.id.password)).perform(ViewActions.typeText(password));
-//            onView(withId(R.id.password)).check(ViewAssertions.matches(withText(password)));
-//
-//            onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
-//
-//            onView(withId(R.id.signin_button)).perform((ViewActions.click()));
-//        }
-//        catch(AssertionError e)
-//        {
-//            assert true;
-//        }
-//    }
+    @Test
+    public void test1signIn()
+    {
+        onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
+
+        onView(withId(R.id.username)).perform(ViewActions.clearText());
+        onView(withId(R.id.username)).perform(ViewActions.typeText(username));
+        onView(withId(R.id.username)).check(ViewAssertions.matches(withText(username)));
+
+        onView(withId(R.id.password)).perform(ViewActions.clearText());
+        onView(withId(R.id.password)).perform(ViewActions.typeText(password));
+        onView(withId(R.id.password)).check(ViewAssertions.matches(withText(password)));
+
+        onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
+
+        onView(withId(R.id.signin_button)).perform((ViewActions.click()));
+    }
+
+    @Test
+    public void test2invalidSignIn()
+    {
+        try {
+            onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
+
+
+            onView(withId(R.id.username)).perform(ViewActions.clearText());
+            onView(withId(R.id.username)).perform(ViewActions.typeText(invalidUsername));
+            onView(withId(R.id.username)).check(ViewAssertions.matches(withText(invalidUsername)));
+
+            onView(withId(R.id.password)).perform(ViewActions.clearText());
+            onView(withId(R.id.password)).perform(ViewActions.typeText(invalidPassword));
+            onView(withId(R.id.password)).check(ViewAssertions.matches(withText(invalidPassword)));
+
+            onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
+
+            onView(withId(R.id.signin_button)).perform((ViewActions.click()));
+        }
+        catch(AssertionError e)
+        {
+            assert true;
+        }
+    }
+    @Test
+    public void test3invalidSignIn()
+    {
+        try {
+            onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
+
+
+            onView(withId(R.id.username)).perform(ViewActions.clearText());
+            onView(withId(R.id.username)).perform(ViewActions.typeText(username));
+            onView(withId(R.id.username)).check(ViewAssertions.matches(withText(username)));
+
+            onView(withId(R.id.password)).perform(ViewActions.clearText());
+            onView(withId(R.id.password)).perform(ViewActions.typeText(invalidPassword));
+            onView(withId(R.id.password)).check(ViewAssertions.matches(withText(invalidPassword)));
+
+            onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
+
+            onView(withId(R.id.signin_button)).perform((ViewActions.click()));
+        }
+        catch(AssertionError e)
+        {
+            assert true;
+        }
+    }
+    @Test
+    public void test4invalidSignIn()
+    {
+        try {
+            onView(withId(R.id.existingaccount_button)).perform(ViewActions.click());
+
+
+            onView(withId(R.id.username)).perform(ViewActions.clearText());
+            onView(withId(R.id.username)).perform(ViewActions.typeText(invalidUsername));
+            onView(withId(R.id.username)).check(ViewAssertions.matches(withText(invalidUsername)));
+
+            onView(withId(R.id.password)).perform(ViewActions.clearText());
+            onView(withId(R.id.password)).perform(ViewActions.typeText(password));
+            onView(withId(R.id.password)).check(ViewAssertions.matches(withText(password)));
+
+            onView(withId(R.id.signin_button)).check(ViewAssertions.matches(isEnabled()));
+
+            onView(withId(R.id.signin_button)).perform((ViewActions.click()));
+        }
+        catch(AssertionError e)
+        {
+            assert true;
+        }
+    }
 
     @Test
     public void test5validRegister()
