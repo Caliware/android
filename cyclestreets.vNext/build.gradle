@@ -13,6 +13,6 @@ android {
   defaultConfig {
     applicationId 'net.cyclestreets'
 
-    testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    testInstrumentationRunner "net.cyclestreets.CycleStreetsTestRunner"
   }
 }

@@ -4,3 +4,7 @@ dependencies {
   compile project(':libraries:cyclestreets-view')
   compile 'com.jjoe64:graphview:3.1.4'
 }
+
+android {
+  buildToolsVersion '24.0.2'
+}
