@@ -49,5 +49,9 @@ public class CycleStreets extends MainNavDrawerActivity
     addDrawerActivity(R.string.settings,
                       android.R.drawable.ic_menu_preferences,
                       SettingsActivity.class);
+    addDrawerActivity(R.string.logoff,
+            android.R.drawable.ic_menu_preferences,
+            AccountDetailsActivity.class);
+
   } // addDrawerItems
 } // CycleStreets
